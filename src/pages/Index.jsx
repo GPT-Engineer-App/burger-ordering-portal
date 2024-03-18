@@ -61,7 +61,7 @@ const Index = () => {
       <Grid templateColumns="repeat(auto-fit, minmax(300px, 1fr))" gap={8}>
         {burgers.map((burger, index) => (
           <Box key={index} borderWidth={1} borderRadius="lg" overflow="hidden" boxShadow="md">
-            <Image src={`https://placehold.co/600x400`} alt={burger.name} objectFit="cover" h={200} />
+            <Image src={`https://source.unsplash.com/600x400/?${burger.name}`} alt={burger.name} objectFit="cover" h={200} />
             <Box p={6}>
               <Heading as="h2" size="lg" mb={2}>
                 {burger.name}
@@ -69,7 +69,7 @@ const Index = () => {
               <Text fontSize="xl" fontWeight="bold" mb={4}>
                 ${burger.price.toFixed(2)}
               </Text>
-              <Button colorScheme="blue" size="lg" onClick={() => addToCart(burger)}>
+              <Button colorScheme="pink" size="lg" onClick={() => addToCart(burger)}>
                 Add to Cart
               </Button>
             </Box>
